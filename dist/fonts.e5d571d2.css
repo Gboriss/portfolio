@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('/Raleway-Regular.f7291794.woff2') format('woff2'),
+		 url('/Raleway-Regular.552a1a82.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RalewayBold';
+	src: url('/Raleway-SemiBold.f02e6d61.woff2') format('woff2'),
+		 url('/Raleway-SemiBold.6322639f.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+/*# sourceMappingURL=/fonts.e5d571d2.css.map */
