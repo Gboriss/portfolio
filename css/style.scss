@@ -151,7 +151,7 @@ img {
 	border: 25px solid var(--color-main);
 	border-radius: 50%;
 	left: 50%;
-	top: -180px;
+	top: -120px;
 	animation: leftBounce 3s ease-in-out infinite;
 }
 @keyframes leftBounce {
@@ -179,9 +179,30 @@ img {
 		top: -25px;
 	}
 }
+.effect-5 {
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	width: 50px;
+	right: 10%;
+	top: 25%;
+	border-radius: 50%;
+	overflow: hidden;
+	animation: spin 10s linear infinite;
+	div {
+		width: 1px;
+		background-color: #4dd0e1;
+	}
+}
 
 .header {
 	padding: 20px 15px;
+
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
 	.row {
 		display: flex;
 		flex-wrap: wrap;
@@ -306,9 +327,6 @@ img {
 
 .home-section {
 	position: relative;
-	.effect {
-
-	}
 	.full-screen {
 		display: flex;
 		// justify-content: space-around;
