@@ -214,6 +214,21 @@ img {
   background-color: #4dd0e1;
 }
 
+.section-title {
+  padding: 0 15px;
+  flex: 0 100%;
+  max-width: 100%;
+  text-align: center;
+}
+.section-title h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .header {
   padding: 20px 15px;
   position: absolute;
@@ -222,11 +237,12 @@ img {
   left: 0;
   z-index: 99;
 }
-.header .row {
+
+.row {
   display: flex;
   flex-wrap: wrap;
 }
-.header .row .logo a {
+.row .logo a {
   display: inline-block;
   text-align: center;
   line-height: 36px;
@@ -239,7 +255,7 @@ img {
   font-weight: 600;
   text-transform: uppercase;
 }
-.header .row .hamburger-btn {
+.row .hamburger-btn {
   height: 40px;
   width: 40px;
   display: flex;
@@ -249,17 +265,17 @@ img {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
-.header .row .hamburger-btn:after {
+.row .hamburger-btn:after {
   border-radius: 50%;
 }
-.header .row .hamburger-btn span {
+.row .hamburger-btn span {
   display: block;
   position: relative;
   height: 2px;
   width: 16px;
   background-color: var(--bg-black-900);
 }
-.header .row .hamburger-btn span:before, .header .row .hamburger-btn span:after {
+.row .hamburger-btn span:before, .row .hamburger-btn span:after {
   content: "";
   position: absolute;
   left: 0;
@@ -267,10 +283,10 @@ img {
   height: 100%;
   background-color: var(--bg-black-900);
 }
-.header .row .hamburger-btn span:before {
+.row .hamburger-btn span:before {
   top: -6px;
 }
-.header .row .hamburger-btn span:after {
+.row .hamburger-btn span:after {
   top: 6px;
 }
 
@@ -390,6 +406,11 @@ img {
   width: 100%;
   border-radius: 50%;
   border: 5px solid transparent;
+}
+
+.about-section {
+  padding: 80px 0 80px;
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=/style.6b54f5b7.css.map */

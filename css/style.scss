@@ -195,65 +195,79 @@ img {
 	}
 }
 
+.section-title {
+	padding: 0 15px;
+	flex: 00 100%;
+	max-width: 100%;
+	text-align: center;
+	h2 {
+		display: inline-block;
+		font-size: 30px;
+		font-weight: 700;
+		color: var(--text-black-900);
+		text-transform: uppercase;
+		margin: 0;
+	}
+}
+
 .header {
 	padding: 20px 15px;
-
 	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 99;
-	.row {
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	.logo a {
+		display: inline-block;
+		text-align: center;
+		line-height: 36px;
+		height: 40px;
+		width: 40px;
+		font-size: 24px;
+		color: var(--color-main);
+		border-radius: 50%;
+		border: 2px solid var(--color-main);
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	.hamburger-btn {
+		height: 40px;
+		width: 40px;
 		display: flex;
-		flex-wrap: wrap;
-		.logo a {
-			display: inline-block;
-			text-align: center;
-			line-height: 36px;
-			height: 40px;
-			width: 40px;
-			font-size: 24px;
-			color: var(--color-main);
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 50%;
+		transition: all 0.3s ease;
+
+		&:after {
 			border-radius: 50%;
-			border: 2px solid var(--color-main);
-			font-weight: 600;
-			text-transform: uppercase;
 		}
-		.hamburger-btn {
-			height: 40px;
-			width: 40px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-			border-radius: 50%;
-			transition: all 0.3s ease;
 
+		span {
+			display: block;
+			position: relative;
+			height: 2px;
+			width: 16px;
+			background-color: var(--bg-black-900);
+			&:before,
 			&:after {
-				border-radius: 50%;
-			}
-
-			span {
-				display: block;
-				position: relative;
-				height: 2px;
-				width: 16px;
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 100%;
 				background-color: var(--bg-black-900);
-				&:before,
-				&:after {
-					content: '';
-					position: absolute;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background-color: var(--bg-black-900);
-				}
-				&:before {
-					top: -6px;
-				}
-				&:after {
-					top: 6px;
-				}
+			}
+			&:before {
+				top: -6px;
+			}
+			&:after {
+				top: 6px;
 			}
 		}
 	}
@@ -374,4 +388,9 @@ img {
 		}
 		
 	}
+}
+
+.about-section {
+	padding: 80px 0 80px;
+	min-height: 100vh;
 }
