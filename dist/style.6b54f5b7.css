@@ -412,5 +412,13 @@ img {
   padding: 80px 0 80px;
   min-height: 100vh;
 }
+.about-section .about-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+.about-section .about-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
 
 /*# sourceMappingURL=/style.6b54f5b7.css.map */
