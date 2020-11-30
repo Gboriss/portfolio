@@ -216,9 +216,10 @@ img {
 
 .section-title {
   padding: 0 15px;
-  flex: 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
   text-align: center;
+  margin-bottom: 60px;
 }
 .section-title h2 {
   display: inline-block;
@@ -393,6 +394,26 @@ img {
 .home-section .full-screen .home-img .btn-1 {
   margin-top: 30px;
 }
+.home-section .full-screen .home-text .social-links,
+.home-section .full-screen .home-img .social-links {
+  margin-top: 20px;
+}
+.home-section .full-screen .home-text .social-links a,
+.home-section .full-screen .home-img .social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 4px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.home-section .full-screen .home-text .social-links a:after,
+.home-section .full-screen .home-img .social-links a:after {
+  border-radius: 50%;
+}
 .home-section .full-screen .home-text .img-box,
 .home-section .full-screen .home-img .img-box {
   max-width: 450px;
@@ -415,10 +436,57 @@ img {
 .about-section .about-img {
   flex: 0 0 40%;
   max-width: 40%;
+  padding: 0 15px;
+}
+.about-section .about-img .img-box {
+  padding: 15px;
+  border-radius: 5px;
+}
+.about-section .about-img .img-box img {
+  width: 100%;
+  border: 10px solid transparent;
+  border-radius: 5px;
 }
 .about-section .about-info {
   flex: 0 0 60%;
   max-width: 60%;
+  padding: 0 15px;
+}
+.about-section .about-info p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: var(--text-black-600);
+}
+.about-section .about-info span {
+  font-weight: 600;
+}
+.about-section .about-info .btn-1 {
+  margin: 30px 20px 0 0;
+}
+
+.service-section {
+  min-width: 100vh;
+}
+.service-section .service-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+}
+.service-section .service-item .service-item-inner {
+  padding: 50px 15px;
+  border-radius: 5px;
+}
+.service-section .service-item .service-item-inner .icon {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.service-section .service-item .service-item-inner .icon img {
+  width: 50px;
+  line-height: 60px;
 }
 
 /*# sourceMappingURL=/style.6b54f5b7.css.map */
