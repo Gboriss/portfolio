@@ -551,7 +551,7 @@ img {
   color: var(--text-black-600);
   text-transform: capitalize;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 .portfolio-section .filter-item:hover:not(.active) {
   opacity: 0.6;
@@ -575,7 +575,7 @@ img {
   position: relative;
 }
 .portfolio-section .portfolio-item .portfolio-item-inner:hover {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: var(--bg-black-50);
 }
 .portfolio-section .portfolio-item .portfolio-item-inner:hover .hover {
   opacity: 1;
@@ -587,7 +587,7 @@ img {
   top: 35%;
   left: 0;
   padding: 0 30px;
-  color: #ddd;
+  color: var(--text-black-900);
   transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
   opacity: 0;
   font-size: 20px;

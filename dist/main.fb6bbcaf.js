@@ -118,7 +118,28 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
-
+(function () {
+  var filterConteiner = document.querySelector('.portfolio-filter');
+  var portfolioItemsContainer = document.querySelector('.portfolio-items');
+  var portfolioItems = document.querySelectorAll('.portfolio-item');
+  console.log(portfolioItems);
+  filterConteiner.addEventListener('click', function (event) {
+    if (event.target.classList.contains('filter-item') && !event.target.classList.contains('active')) {
+      filterConteiner.querySelector('.active').classList.remove('outer-shadow', 'active');
+      event.target.classList.add('outer-shadow', 'active');
+      var target = event.target.getAttribute('data-target');
+      portfolioItems.forEach(function (item) {
+        if (target === item.getAttribute('data-category')) {
+          item.classList.remove('hide');
+          item.classList.add('show');
+        } else {
+          item.classList.remove('show');
+          item.classList.add('hide');
+        }
+      });
+    }
+  });
+})();
 },{}],"C:/Users/Xiaomi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -147,7 +168,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53393" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54604" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
