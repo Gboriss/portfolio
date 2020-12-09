@@ -212,10 +212,8 @@ img {
 		margin: 0;
 	}
 }
-.section {
-	.hide {
-		display: none;
-	}
+.section.hide {
+	// display: none;
 }
 
 .header {
@@ -399,9 +397,6 @@ img {
 					transition: all 0.3s ease;
 					&:after {
 						border-radius: 50%;
-					}
-					&:hover {
-						// filter: invert(1);
 					}
 				}
 			}

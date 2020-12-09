@@ -118,64 +118,69 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/main.js":[function(require,module,exports) {
-(function () {
-  var filterConteiner = document.querySelector('.portfolio-filter');
-  var portfolioItems = document.querySelectorAll('.portfolio-item');
-  filterConteiner.addEventListener('click', function (event) {
-    if (event.target.classList.contains('filter-item') && !event.target.classList.contains('active')) {
-      filterConteiner.querySelector('.active').classList.remove('outer-shadow', 'active');
-      event.target.classList.add('outer-shadow', 'active');
-      var target = event.target.getAttribute('data-target');
-      portfolioItems.forEach(function (item) {
-        if (target === item.getAttribute('data-category') || target === 'all') {
-          item.classList.remove('hide');
-          item.classList.add('show');
-        } else {
-          item.classList.remove('show');
-          item.classList.add('hide');
-        }
-      });
-    }
-  });
-  var sections = document.querySelectorAll('.section');
-  sections.forEach(function (section) {
-    if (!section.classList.contains('active')) {
-      section.classList.add('hide');
-    }
-  });
-  var hamburgerBtn = document.querySelector('.hamburger-btn');
-  var navMenu = document.querySelector('.nav-menu');
-  var closeNavBtn = document.querySelector('.close-nav-menu');
-  hamburgerBtn.addEventListener('click', showNavMenu);
-  closeNavBtn.addEventListener('click', hideNavMenu);
+var hamburgerBtn = document.querySelector('.hamburger-btn');
+var navMenu = document.querySelector('.nav-menu');
+var closeNavBtn = document.querySelector('.close-nav-menu');
+hamburgerBtn.addEventListener('click', showNavMenu);
+closeNavBtn.addEventListener('click', hideNavMenu);
 
-  function showNavMenu() {
-    navMenu.classList.add('open'); // bodyScrollingToggle()
+function showNavMenu() {
+  navMenu.classList.add('open');
+}
+
+function hideNavMenu() {
+  navMenu.classList.remove('open');
+}
+
+var filterConteiner = document.querySelector('.portfolio-filter');
+var portfolioItems = document.querySelectorAll('.portfolio-item');
+filterConteiner.addEventListener('click', function (event) {
+  if (event.target.classList.contains('filter-item') && !event.target.classList.contains('active')) {
+    filterConteiner.querySelector('.active').classList.remove('outer-shadow', 'active');
+    event.target.classList.add('outer-shadow', 'active');
+    var target = event.target.getAttribute('data-target');
+    portfolioItems.forEach(function (item) {
+      if (target === item.getAttribute('data-category') || target === 'all') {
+        item.classList.remove('hide');
+        item.classList.add('show');
+      } else {
+        item.classList.remove('show');
+        item.classList.add('hide');
+      }
+    });
   }
+}); //-------
 
-  function hideNavMenu() {
-    navMenu.classList.remove('open'); // bodyScrollingToggle()
-  }
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('link-item')) {
+    if (event.target.hash !== '') {
+      event.preventDefault();
+      var hash = event.target.hash; // document.querySelector('.section.active').classList.add('hide')
+      // document.querySelector('.section.active').classList.remove('active')
+      // document.querySelector(hash).classList.add('active')
+      // document.querySelector(hash).classList.remove('hide')
 
-  document.addEventListener('click', function (event) {
-    if (event.target.classList.contains('link-item')) {
-      if (event.target.hash !== '') {
-        event.preventDefault();
-        var hash = event.target.hash;
-        console.log(hash);
-        document.querySelector('.section.active').classList.add('hide');
-        document.querySelector('.section.active').classList.remove('active');
-        document.querySelector(hash).classList.add('active');
-        document.querySelector(hash).classList.remove('hide');
-        navMenu.querySelector('.active').classList.add('outer-shadow', 'hover-in-shadow');
-        navMenu.querySelector('.active').classList.remove('active', 'inner-shadow');
+      navMenu.querySelector('.active').classList.add('outer-shadow', 'hover-in-shadow');
+      navMenu.querySelector('.active').classList.remove('active', 'inner-shadow');
+
+      if (navMenu.classList.contains('open')) {
         event.target.classList.add('active', 'inner-shadow');
         event.target.classList.remove('outer-shadow', 'hover-in-shadow');
         hideNavMenu();
+      } else {
+        var navItems = navMenu.querySelectorAll('.link-item');
+        navItems.forEach(function (item) {
+          if (hash === item.hash) {
+            item.classList.add('active', 'inner-shadow');
+            item.classList.remove('outer-shadow', 'hover-in-shadow');
+          }
+        });
       }
+
+      window.location.hash = hash;
     }
-  });
-})();
+  }
+});
 },{}],"C:/Users/Xiaomi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -204,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53981" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52685" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
