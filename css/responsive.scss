@@ -1,0 +1,100 @@
+@media(max-width: 991px) {
+    .service-section {
+        .service-item {
+            flex: 0 0 50%;
+		    max-width: 50%;
+        }
+    }
+    .portfolio-section {
+        .portfolio-item {
+            flex: 0 0 50%;
+		    max-width: 50%;
+        }
+    }
+}
+@media(max-width: 767px) {
+    .home-section {
+        .full-screen {
+            // min-height: 100%;
+            .home-text,
+            .home-img {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .home-img {
+                .img-box {
+                    margin-bottom: 20px;
+                    max-width: 350px;
+                }
+            }
+            .home-text {
+                order: 2;
+                display: flex;
+                justify-content: space-around;
+                .social-links {
+                    display: flex;
+                    flex-direction: column;
+                    a {
+                        margin: 8px;
+                    }
+                }
+            }
+            .full-screen {
+                padding: 100px 0;
+            }
+        }
+    }
+    .effect-1 {
+        right: 25%;
+        bottom: 40%;
+    }
+    .effect-3 {
+        margin-left: -60px;
+    } 
+    .effect-4 {
+        left: -1%;
+    }
+    .effect-5 {
+        top: 9%;
+
+    }
+    .about-section {
+        .about-info,
+        .about-img {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .about-img {
+            margin-bottom: 40px;
+        }
+    }
+    .service-section {
+        .service-item {
+            margin: 0 auto;
+            flex: 0 0 80%;
+		    max-width: 80%;
+        }
+    }
+    .portfolio-section {
+        .portfolio-item {
+            margin: 0 auto;
+            flex: 0 0 80%;
+		    max-width: 80%;
+        }
+    }
+    .about-section {
+        padding: 30px 0 80px;
+    }
+}
+
+@media(max-width: 574px) {
+    .home-section {
+        .full-screen {
+            .home-text,
+            .home-img {
+                // flex: 0 0 100%;
+                // max-width: 260px;
+            }
+        }
+    }
+}

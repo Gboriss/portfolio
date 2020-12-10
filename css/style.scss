@@ -152,7 +152,7 @@ img {
 	width: 180px;
 	border: 25px solid var(--color-main);
 	border-radius: 50%;
-	left: 50%;
+	left: 30%;
 	top: -120px;
 	animation: leftBounce 3s ease-in-out infinite;
 }
@@ -186,8 +186,8 @@ img {
 	justify-content: space-between;
 	height: 50px;
 	width: 50px;
-	right: 10%;
-	top: 25%;
+	right: 5%;
+	top: 13%;
 	border-radius: 50%;
 	overflow: hidden;
 	animation: spin 10s linear infinite;
@@ -212,8 +212,48 @@ img {
 		margin: 0;
 	}
 }
-.section.hide {
-	// display: none;
+.preloader.fade-out {
+	opacity: 0;
+	transition: all 0.6s ease;
+}
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1500;
+	background-color: var(--bg-black-50);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.box {
+		width: 65px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		div {
+			height: 15px;
+			width: 15px;
+			background-color: var(--color-main);
+			border-radius: 50%;
+			animation: loaderAni 1s ease infinite;
+			&:nth-child(2) {
+				animation-delay: 0.1s;
+			}
+			&:nth-child(3) {
+				animation-delay: 0.2s;
+			}
+		}
+	}
+}
+@keyframes loaderAni {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-30px);
+	}
 }
 
 .header {
@@ -246,6 +286,7 @@ img {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		// background: var(--bg-black-50);
 		cursor: pointer;
 		border-radius: 50%;
 		transition: all 0.3s ease;
@@ -395,6 +436,11 @@ img {
 					margin: 0 4px;
 					border-radius: 50%;
 					transition: all 0.3s ease;
+					.telegram {
+						background-image: url('../img/vector/telegram.svg');
+						width: 20px;
+						height: 20px;
+					}
 					&:after {
 						border-radius: 50%;
 					}
@@ -473,7 +519,6 @@ img {
 			text-align: center;
 			width: 100%;
 			&:hover {
-
 				.icon {
 					box-shadow: var(--inner-shadow-0);
 					&:after {
@@ -612,6 +657,24 @@ img {
 					z-index: -1;
 					border-radius: 5px;
 					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.contact-section {
+	.contact-item {
+		// flex: 0 0 45%;
+		// max-width: 45%;
+		padding: 15px;
+		margin: 40px auto 0;
+		.contact-item-inner {
+			.contact {
+				margin: 15px;
+				a {
+					color: var(--text-black-700);
+	
 				}
 			}
 		}

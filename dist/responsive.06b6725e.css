@@ -1,0 +1,13 @@
+
+
+
+@media(min-width: 767px) {
+    .home-section .full-screen .home-text {
+        background: red;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+}
+
+/*# sourceMappingURL=/responsive.06b6725e.css.map */
