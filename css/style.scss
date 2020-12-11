@@ -202,7 +202,7 @@ img {
 	flex: 0 0 100%;
 	max-width: 100%;
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 15px;
 	h2 {
 		display: inline-block;
 		font-size: 30px;
@@ -491,11 +491,26 @@ img {
 			margin-bottom: 15px;
 			color: var(--text-black-600);
 		}
+		a {
+			color: var(--text-black-900);
+		}
 		span {
 			font-weight: 600;
 		}
 		.btn-1 {
-			margin: 30px 20px 0 0;
+			margin: 10px 20px 30px 0;
+			color: var(--color-main);
+		}
+		.about-list {
+			list-style-type: circle;
+			li {
+				margin-left: 20px;
+				color: var(--color-main);
+				p {
+					color: var(--text-black-600);
+
+				}
+			}
 		}
 	}
 }
@@ -514,7 +529,7 @@ img {
 			// opacity: 1;
 		}
 		.service-item-inner {
-			padding: 50px 15px;
+			padding: 35px 15px;
 			border-radius: 5px;
 			text-align: center;
 			width: 100%;
@@ -621,34 +636,57 @@ img {
 			border-radius: 5px;
 			cursor: pointer;
 			width: 100%;
-			transition: opacity .5s, background-color .5s;
+			transition: opacity .5s .2s, background-color .4s .2s;
 			position: relative;
-			// background-color: rgba(0,0,0,.75);
 			
+			.portfolio-item-title {
+				font-size: 17px;
+				text-align: center;
+				color: var(--text-black-700);
+				width: 100%;
+				position: absolute;
+				top: 25%;
+				left: 0;
+				padding: 0 30px;
+				
+				// transition: transform .5s .1s, opacity .5s .1s;
+				opacity: 0;
+				margin: 10px 0;
+				h3 {
+					margin: 10px;
+					opacity: 0;
+				}
+				span {
+					font-weight: 900;
+				}
+				p {
+					opacity: 0;
+					font-size: 16px;
+				}
+			}
 			&:hover {
 				background-color: var(--bg-black-50);
+				p {
+					transform: translateY(30px);
+					opacity: 1;
+					transition: transform .4s .2s,opacity .4s .2s;
+				}
+				h3 {
+					transform: translateY(10px);
+					opacity: 1;
+					transition: transform .6s .3s,opacity .6s .3s;
+				}
 			
 				.hover {
 					opacity: 1;
-					transform: translateY(10px);
+					// transform: translateY(15px);
 					z-index: 2;
 				}
 			}
-			p {
-				position: absolute;
-				top: 35%;
-				left: 0;
-				padding: 0 30px;
-				color: var(--text-black-900);
-				
-				transition: transform .4s .2s, opacity .4s .2s;
-				opacity: 0;
-
-				font-size: 20px;
-				margin: 10px 0 0;
-			}
 			h2 {
 				margin-bottom: 10px;
+				color: var(--bg-black-900);
+
 			}
 			.portfolio-item-img {
 				text-align: center;
@@ -672,6 +710,13 @@ img {
 		.contact-item-inner {
 			.contact {
 				margin: 15px;
+
+				img {
+					margin-right: 10px;
+				}
+				strong {
+					margin-right: 5px;
+				}
 				a {
 					color: var(--text-black-700);
 	
