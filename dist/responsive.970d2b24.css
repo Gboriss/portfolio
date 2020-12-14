@@ -76,6 +76,11 @@
   .about-section {
     padding: 30px 0 80px;
   }
+
+  .nav-menu .nav-menu-inner {
+    align-items: flex-start;
+    margin-top: 30px;
+  }
 }
 
 /*# sourceMappingURL=/responsive.970d2b24.css.map */

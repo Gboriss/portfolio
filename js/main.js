@@ -49,12 +49,7 @@ document.addEventListener('click', (event) => {
 
             event.preventDefault()
             const hash = event.target.hash 
-            
-            // document.querySelector('.section.active').classList.add('hide')
-            // document.querySelector('.section.active').classList.remove('active')
-
-            // document.querySelector(hash).classList.add('active')
-            // document.querySelector(hash).classList.remove('hide')
+            console.log(hash)
 
             navMenu.querySelector('.active').classList.add('outer-shadow', 'hover-in-shadow')
             navMenu.querySelector('.active').classList.remove('active', 'inner-shadow')
@@ -81,6 +76,28 @@ document.addEventListener('click', (event) => {
 window.addEventListener('load', () => {
     document.querySelector('.preloader').classList.add('fade-out')
     setTimeout(() => {
-        document.querySelector('.preloader').style.display='none'
+        document.querySelector('.preloader').style.display = 'none'
     }, 600)
+})
+
+
+const arrowTop = document.querySelector('.arrowTop')
+
+arrowTop.onclick = function() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+    // window.scrollTo(pageXOffset, 0)
+
+}
+
+window.addEventListener('scroll', function() {
+    // if (arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight)) {
+    //     arrowTop.style.display = 'block'
+    // }
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        arrowTop.style.display = 'block'
+    } else {
+        arrowTop.style.display = 'none'
+    }
+
 })

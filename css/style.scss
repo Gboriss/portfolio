@@ -10,7 +10,9 @@
 	--text-black-300: #bbb;
 	--outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
 	--outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-	--inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+	// --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+	--inner-shadow: inset 0 0 3px #d0d0d0, inset 0 0 3px #f8f8f8;
+
 	--color-main: #fb839e;
 	--inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 	
@@ -21,6 +23,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
+}
+html {
+	scroll-behavior: smooth;
+
 }
 
 body {
@@ -255,7 +261,28 @@ img {
 		transform: translateY(-30px);
 	}
 }
+.arrowTop {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	color: var(--color-main);
+	position: fixed;
+	bottom: 40px;
+	right: 6px;
+	text-align: center;
 
+	display: none;
+	
+	cursor: pointer;
+	font-size: 20px;
+	transition: all 0.3s ease;	
+	&:after {
+		border-radius: 50%;
+	}
+}
+// arrowTop.active {
+// 	opacity: 1;
+// }
 .header {
 	padding: 20px 15px;
 	position: absolute;
@@ -331,20 +358,28 @@ img {
 	opacity: 0;
 	visibility: hidden;
 	overflow-y: auto;
+	overflow: hidden;
+	
+	.justify-content {
+		display: flex;
+		flex-direction: column;
+	}
 	.close-nav-menu {
-		height: 40px;
-		width: 40px;
-		display: block;
+		margin-left: auto;
 		font-size: 35px;
 		line-height: 35px;
 		border-radius: 50%;
-		position: absolute;
-		right: 15px;
-		top: 20px;
 		cursor: pointer;
 		text-align: center;
 		color: var(--text-black-600);
 		transition: all 0.3s ease;
+		height: 40px;
+		width: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+		margin-right: 3px;
 		&:after {
 			border-radius: 50%;
 		}
@@ -636,7 +671,7 @@ img {
 			border-radius: 5px;
 			cursor: pointer;
 			width: 100%;
-			transition: opacity .5s .2s, background-color .4s .2s;
+			transition: opacity .5s .2s, background-color .3s .2s;
 			position: relative;
 			
 			.portfolio-item-title {
@@ -702,11 +737,10 @@ img {
 }
 
 .contact-section {
+	margin-top: 70px;
 	.contact-item {
-		// flex: 0 0 45%;
-		// max-width: 45%;
 		padding: 15px;
-		margin: 40px auto 0;
+		margin: 40px auto;
 		.contact-item-inner {
 			.contact {
 				margin: 15px;

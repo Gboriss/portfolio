@@ -155,11 +155,8 @@ document.addEventListener('click', function (event) {
   if (event.target.classList.contains('link-item')) {
     if (event.target.hash !== '') {
       event.preventDefault();
-      var hash = event.target.hash; // document.querySelector('.section.active').classList.add('hide')
-      // document.querySelector('.section.active').classList.remove('active')
-      // document.querySelector(hash).classList.add('active')
-      // document.querySelector(hash).classList.remove('hide')
-
+      var hash = event.target.hash;
+      console.log(hash);
       navMenu.querySelector('.active').classList.add('outer-shadow', 'hover-in-shadow');
       navMenu.querySelector('.active').classList.remove('active', 'inner-shadow');
 
@@ -186,6 +183,23 @@ window.addEventListener('load', function () {
   setTimeout(function () {
     document.querySelector('.preloader').style.display = 'none';
   }, 600);
+});
+var arrowTop = document.querySelector('.arrowTop');
+
+arrowTop.onclick = function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; // window.scrollTo(pageXOffset, 0)
+};
+
+window.addEventListener('scroll', function () {
+  // if (arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight)) {
+  //     arrowTop.style.display = 'block'
+  // }
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    arrowTop.style.display = 'block';
+  } else {
+    arrowTop.style.display = 'none';
+  }
 });
 },{}],"C:/Users/Xiaomi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -215,7 +229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65116" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60963" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
