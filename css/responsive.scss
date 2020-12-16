@@ -61,8 +61,8 @@
     .about-section {
         .about-info,
         .about-img {
-            flex: 0 0 100%;
-            max-width: 100%;
+            flex: 0 0 95%;
+            max-width: 95%;
         }
         .about-img {
             margin-bottom: 40px;
@@ -94,13 +94,11 @@
     }
 }
 
-@media(max-width: 574px) {
-    .home-section {
-        .full-screen {
-            .home-text,
-            .home-img {
-                // flex: 0 0 100%;
-                // max-width: 260px;
+@media(min-width: 720px) {
+   header {
+        &.sticked {
+            &:after {
+                opacity: .125;
             }
         }
     }

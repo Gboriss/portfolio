@@ -200,7 +200,85 @@ window.addEventListener('scroll', function () {
   } else {
     arrowTop.style.display = 'none';
   }
+}); // const targets = document.querySelectorAll('.service-item')
+// const options = {
+//     root: 'null',
+//     rootMargin: '0px',
+//     threshold: 0.05
+// }
+// const loadImage = function (entries, observer) {
+// }
+// let observer = new IntersectionObserver(loadImage, options)
+// window.onload = () => {
+//     // устанавливаем настройки
+//     const options = {
+//         // родитель целевого элемента - область просмотра
+//         root: null,
+//         // без отступов
+//         rootMargin: '0px',
+//         // процент пересечения - половина изображения
+//         threshold: 0.5
+//     }
+//     // создаем наблюдатель
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         // для каждой записи-целевого элемента
+//         entries.forEach(entry => {
+//             // если элемент является наблюдаемым
+//             if (entry.isIntersecting) {
+//                 const lazyImg = entry.target
+//                 // выводим информацию в консоль - проверка работоспособности наблюдателя
+//                 console.log(lazyImg)
+//                 // меняем фон контейнера
+//                 lazyImg.style.background = 'deepskyblue'
+//                 // прекращаем наблюдение
+//                 observer.unobserve(lazyImg)
+//             }
+//         })
+//     }, options)
+//     // с помощью цикла следим за всеми img на странице
+//     const arr = document.querySelectorAll('img')
+//     arr.forEach(i => {
+//         observer.observe(i)
+//     })
+// }
+// window.addEventListener('load', event => {
+//     let box = document.querySelector('main')
+//     // ratio - процент видимости элемента
+//     let prevRatio = 0.0
+//     let observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             let curRatio = entry.intersectionRatio
+//             // при прокрутке цвет меняется от светло-синего до светло-красного
+//             // мы хотим наблюдать эффект при прокрутке страницы в обе стороны (вниз и вверх)
+//            // поэтому наблюдение за элементом не прекращается
+//             curRatio > prevRatio ? entry.target.style.background = `rgba(40,40,190,${curRatio})` : entry.target.style.background = `rgba(190,40,40,${curRatio})`
+//             prevRatio = curRatio
+//         })
+//     }, {
+//         threshold: buildThresholdList()
+//     })
+//     observer.observe(box)
+//     // функция построения шкалы пересечения
+//     // шкала представляет собой массив из 20 элементов, определяющих цвет контейнера
+//     function buildThresholdList() {
+//         let thresholds = []
+//         let steps = 20
+//         for (let i = 1.0; i <= steps; i++) {
+//             let ratio = i / steps
+//             thresholds.push(ratio)
+//         }
+//         return thresholds
+//     }
+// })
+
+var observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    entry.isIntersecting ? entry.target.classList.replace('to-left', 'to-right') : entry.target.classList.replace('to-right', 'to-left');
+  });
+}, {
+  threshold: .5
 });
+observer.observe(document.querySelector('img'));
 },{}],"C:/Users/Xiaomi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -229,7 +307,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60963" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57979" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

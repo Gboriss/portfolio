@@ -54,8 +54,8 @@
 
   .about-section .about-info,
 .about-section .about-img {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 95%;
+    max-width: 95%;
   }
   .about-section .about-img {
     margin-bottom: 40px;
@@ -80,6 +80,11 @@
   .nav-menu .nav-menu-inner {
     align-items: flex-start;
     margin-top: 30px;
+  }
+}
+@media (min-width: 720px) {
+  header.sticked:after {
+    opacity: 0.125;
   }
 }
 
