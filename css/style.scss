@@ -666,6 +666,7 @@ img {
 			border-radius: 5px;
 			cursor: pointer;
 			transition: opacity .5s .2s, background-color .3s .2s;
+			
 			.portfolio-item-title {
 				position: absolute;
 				width: 100%;
@@ -690,7 +691,7 @@ img {
 				}
 			}
 			&:hover {
-				background-color: var(--bg-black-50);
+				// background-color: var(--bg-black-50);
 				p {
 					transform: translateY(30px);
 					opacity: 1;
@@ -703,7 +704,15 @@ img {
 				}
 				.hover {
 					opacity: 1;
-					z-index: 2;
+					z-index: 222;
+				}
+				.portfolio-item-img {
+					transition: all 0.5s ease;
+					
+					img {	
+						transition: all 0.5s ease;
+						z-index: -1;
+					}
 				}
 			}
 			h2 {
@@ -716,7 +725,6 @@ img {
 				img {
 					position: relative;
 					width: 100%;
-					z-index: -1;
 					border-radius: 5px;
 				}
 			}

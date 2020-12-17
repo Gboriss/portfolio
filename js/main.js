@@ -103,12 +103,14 @@ window.addEventListener('scroll', function() {
 })
 
 
-let observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        entry.isIntersecting ? entry.target.classList.replace('to-left', 'to-right') : entry.target.classList.replace('to-right', 'to-left')
-    })
-}, {
-    threshold: .5
-})
+// let observer = new IntersectionObserver((entries) => {
+//     // entries.forEach(entry => {
+//     // })
+//     if (entries.intersectionRatio < 0) {
 
-observer.observe(document.querySelector('img'))
+//     }
+// }, {
+//     threshold: .5
+// })
+
+// observer.observe(document.querySelector('.anim'))

@@ -82,10 +82,5 @@
     margin-top: 30px;
   }
 }
-@media (min-width: 720px) {
-  header.sticked:after {
-    opacity: 0.125;
-  }
-}
 
 /*# sourceMappingURL=/responsive.970d2b24.css.map */
