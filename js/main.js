@@ -103,14 +103,38 @@ window.addEventListener('scroll', function() {
 })
 
 
-// let observer = new IntersectionObserver((entries) => {
-//     // entries.forEach(entry => {
-//     // })
-//     if (entries.intersectionRatio < 0) {
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            entry.target.style.animation = 'anim1 0.3s forwards ease-out'
+        } else {
+            entry.target.style.animation = 'none'
+        }
+    })
+}, {
+    threshold: .5
+})
 
-//     }
-// }, {
-//     threshold: .5
-// })
+let h2 = document.querySelectorAll('h2')
 
-// observer.observe(document.querySelector('.anim'))
+h2.forEach(h => {
+    observer.observe(h)
+})
+
+let skills = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            entry.target.style.animation = 'slide-up 0.3s forwards ease-out'
+        } else {
+            entry.target.style.animation = 'none'
+        }
+    })
+}, {
+    threshold: .5
+})
+let service_item = document.querySelectorAll('.service-item')
+
+service_item.forEach(service => {
+    observer.observe(service)
+})
+
