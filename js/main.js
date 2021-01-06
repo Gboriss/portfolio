@@ -1,18 +1,23 @@
-    const hamburgerBtn = document.querySelector('.hamburger-btn')
-    const navMenu = document.querySelector('.nav-menu')
-    const closeNavBtn = document.querySelector('.close-nav-menu')
+import '../css/style'
+import '../css/responsive'
+import '../css/animation'
 
-    hamburgerBtn.addEventListener('click', showNavMenu)
+    
+const hamburgerBtn = document.querySelector('.hamburger-btn')
+const navMenu = document.querySelector('.nav-menu')
+const closeNavBtn = document.querySelector('.close-nav-menu')
 
-    closeNavBtn.addEventListener('click', hideNavMenu)
+hamburgerBtn.addEventListener('click', showNavMenu)
 
-    function showNavMenu () {
-        navMenu.classList.add('open')
-    }
+closeNavBtn.addEventListener('click', hideNavMenu)
 
-    function hideNavMenu () {
-        navMenu.classList.remove('open')
-    }
+function showNavMenu () {
+    navMenu.classList.add('open')
+}
+
+function hideNavMenu () {
+    navMenu.classList.remove('open')
+}
 
 
 
