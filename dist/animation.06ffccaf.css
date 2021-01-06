@@ -1,0 +1,2 @@
+@keyframes anim1{0%{transform:translateX(100px);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes slide-up{0%{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes about1{0%{transform:translateX(-100px);opacity:0}to{transform:translateX(0);opacity:1}}@keyframes top{0%{transform:translateY(100px);opacity:0}to{transform:translateY(0);opacity:1}}
+/*# sourceMappingURL=/animation.06ffccaf.css.map */

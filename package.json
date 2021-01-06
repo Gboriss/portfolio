@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "sass": "^1.29.0"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.1"
   }
 }
