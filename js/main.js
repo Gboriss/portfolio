@@ -111,9 +111,7 @@ let observer = new IntersectionObserver((entries) => {
             entry.target.style.animation = 'none'
         }
     })
-}, {
-    threshold: .5
-})
+}, { threshold: .5 })
 
 let h2 = document.querySelectorAll('h2')
 
@@ -124,17 +122,34 @@ h2.forEach(h => {
 let skills = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
-            entry.target.style.animation = 'slide-up 0.3s forwards ease-out'
+            entry.target.style.animationName = 'slide-up'
+            entry.target.style.animationDuration = '0.3s'
+            entry.target.style.animationFillMode = 'forwards'
+            // entry.target.style.animation = 'slide-up 0.3s forwards ease-out'
+            // entry.target.style.animation = 'slide-up 0.3s forwards ease-out'
+
         } else {
             entry.target.style.animation = 'none'
         }
     })
-}, {
-    threshold: .5
-})
-let service_item = document.querySelectorAll('.service-item')
+}, { threshold: [0, .25, .5, .75, 1] })
+let service_item = document.querySelectorAll('.cont_observ')
 
 service_item.forEach(service => {
-    observer.observe(service)
+    skills.observe(service)
 })
 
+let contact_item = document.querySelectorAll('.contact-item')
+let contact = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            entry.target.style.animation = 'top 0.3s forwards ease-out'
+        } else {
+            entry.target.style.animation = 'none'
+        }
+    })
+}, { threshold: .5 })
+
+contact_item.forEach(service => {
+    contact.observe(service)
+})

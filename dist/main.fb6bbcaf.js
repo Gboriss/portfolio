@@ -219,7 +219,26 @@ h2.forEach(function (h) {
 var skills = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.intersectionRatio > 0) {
-      entry.target.style.animation = 'slide-up 0.3s forwards ease-out';
+      entry.target.style.animationName = 'slide-up';
+      entry.target.style.animationDuration = '0.3s';
+      entry.target.style.animationFillMode = 'forwards'; // entry.target.style.animation = 'slide-up 0.3s forwards ease-out'
+      // entry.target.style.animation = 'slide-up 0.3s forwards ease-out'
+    } else {
+      entry.target.style.animation = 'none';
+    }
+  });
+}, {
+  threshold: [0, .25, .5, .75, 1]
+});
+var service_item = document.querySelectorAll('.cont_observ');
+service_item.forEach(function (service) {
+  skills.observe(service);
+});
+var contact_item = document.querySelectorAll('.contact-item');
+var contact = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.animation = 'top 0.3s forwards ease-out';
     } else {
       entry.target.style.animation = 'none';
     }
@@ -227,9 +246,8 @@ var skills = new IntersectionObserver(function (entries) {
 }, {
   threshold: .5
 });
-var service_item = document.querySelectorAll('.service-item');
-service_item.forEach(function (service) {
-  observer.observe(service);
+contact_item.forEach(function (service) {
+  contact.observe(service);
 });
 },{}],"C:/Users/Xiaomi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -259,7 +277,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51492" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62703" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

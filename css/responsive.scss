@@ -61,8 +61,9 @@
     .about-section {
         .about-info,
         .about-img {
-            flex: 0 0 95%;
-            max-width: 95%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 30px;
         }
         .about-img {
             margin-bottom: 40px;
@@ -71,15 +72,15 @@
     .service-section {
         .service-item {
             margin: 0 auto;
-            flex: 0 0 80%;
-		    max-width: 80%;
+            flex: 0 0 90%;
+		    max-width: 90%;
         }
     }
     .portfolio-section {
         .portfolio-item {
             margin: 0 auto;
-            flex: 0 0 80%;
-		    max-width: 80%;
+            flex: 0 0 90%;
+		    max-width: 90%;
         }
     }
     .about-section {
@@ -92,14 +93,23 @@
 
         }
     }
-}
-
-@media(min-width: 720px) {
-//    header {
-//         &.sticked {
-//             &:after {
-//                 opacity: .125;
-//             }
-//         }
-//     }
+    .contact-section {
+        .contact-item {
+            padding: 0;          
+            .contact-item-inner {
+                margin-left: 20px;
+                margin-top: 10px;
+                .contact {
+                    margin: 0;
+                    margin-bottom: 10px;
+                    img {
+                        margin-right: 0;
+                    }
+                    strong {
+                    	margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
 }

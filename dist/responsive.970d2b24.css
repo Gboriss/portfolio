@@ -54,8 +54,9 @@
 
   .about-section .about-info,
 .about-section .about-img {
-    flex: 0 0 95%;
-    max-width: 95%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 30px;
   }
   .about-section .about-img {
     margin-bottom: 40px;
@@ -63,14 +64,14 @@
 
   .service-section .service-item {
     margin: 0 auto;
-    flex: 0 0 80%;
-    max-width: 80%;
+    flex: 0 0 90%;
+    max-width: 90%;
   }
 
   .portfolio-section .portfolio-item {
     margin: 0 auto;
-    flex: 0 0 80%;
-    max-width: 80%;
+    flex: 0 0 90%;
+    max-width: 90%;
   }
 
   .about-section {
@@ -80,6 +81,24 @@
   .nav-menu .nav-menu-inner {
     align-items: flex-start;
     margin-top: 30px;
+  }
+
+  .contact-section .contact-item {
+    padding: 0;
+  }
+  .contact-section .contact-item .contact-item-inner {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .contact-section .contact-item .contact-item-inner .contact {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .contact-section .contact-item .contact-item-inner .contact img {
+    margin-right: 0;
+  }
+  .contact-section .contact-item .contact-item-inner .contact strong {
+    margin-right: 0;
   }
 }
 
