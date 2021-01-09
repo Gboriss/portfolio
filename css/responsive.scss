@@ -70,6 +70,7 @@
         }
     }
     .service-section {
+        margin-bottom: 80px;
         .service-item {
             margin: 0 auto;
             flex: 0 0 90%;
@@ -100,8 +101,9 @@
                 margin-left: 20px;
                 margin-top: 10px;
                 .contact {
-                    margin: 0;
+                    padding: 0;
                     margin-bottom: 10px;
+                    line-height: 1;
                     img {
                         margin-right: 0;
                     }

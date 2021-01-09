@@ -562,7 +562,8 @@ img {
 }
 
 .service-section {
-	min-height: 100vh;
+	// min-height: 100vh;
+	margin-bottom: 160px;
 	.service-item {
 		display: flex;
 		flex-wrap: wrap;
@@ -766,21 +767,21 @@ img {
 .contact-section {
 	margin-top: 70px;
 	.contact-item {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
 		opacity: 0;
 		padding: 15px;
 		margin: 40px auto;
-		display: flex;
-
-		align-items: flex-start;
-		justify-content: flex-start;
-
 		.contact-item-inner {
 			margin: 0 auto;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			.contact {
-				margin: 15px;
+
+				padding: 15px;
+				cursor: pointer;
 				img {
 					margin-right: 10px;
 				}
